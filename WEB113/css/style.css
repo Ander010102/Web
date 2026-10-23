@@ -28,12 +28,31 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Menu suspenso do botão ☰ */
 #menu-mobile {
-    display: none; /* escondido por padrão */
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 16px;
+    z-index: 20;
+    width: 280px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    background-color: var(--roxo-escuro);
+    border: 1px solid #ffffff;
+    border-radius: var(--raio);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 #menu-mobile.aberto {
-    display: block; /* mostra quando clicar */
+    display: flex;
+}
+
+#menu-mobile a {
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 6px;
 }
 
 body {
