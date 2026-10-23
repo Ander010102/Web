@@ -77,3 +77,37 @@ function modoEscuro() {
         });
     });
 }
+
+const botaoMenu = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu-mobile");
+
+function alternarMenu(abrir) {
+    const aberto = menu.classList.toggle("aberto", abrir);
+    botaoMenu.setAttribute("aria-expanded", aberto);
+}
+
+// Abre/fecha ao clicar no botão
+botaoMenu.addEventListener("click", function () {
+    alternarMenu();
+});
+
+// Fecha ao clicar em qualquer link do menu
+menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        alternarMenu(false);
+    });
+});
+
+// Fecha ao clicar fora do menu
+document.addEventListener("click", function (e) {
+    if (!menu.contains(e.target) && !botaoMenu.contains(e.target)) {
+        alternarMenu(false);
+    }
+});
+
+// Fecha com a tecla Esc
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+        alternarMenu(false);
+    }
+});
