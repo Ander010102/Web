@@ -302,7 +302,7 @@ main a:hover {
 /*projetos */
 .projetos-grid {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -310,7 +310,7 @@ main a:hover {
     background-color: white;
     border: 1px solid #DDD;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     flex: 1;           /* todos ocupam espaço igual */
     min-width: 200px;  /* largura mínima antes de quebrar */
 }
